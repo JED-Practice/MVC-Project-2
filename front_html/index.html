@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <style></style> -->
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fas fa-utensil-spoon"></i> Food Ordering System</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarRes"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRes">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./restaurants.html"
+                >Restaurants</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./login.html">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./signup.html">Register</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >johndoe2
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./profile.html"
+                  ><i class="fas fa-user-circle"></i> My Profile</a
+                >
+                <hr />
+                <a class="dropdown-item" href="./orders.html"
+                  ><i class="fas fa-shopping-bag"></i> Orders</a
+                >
+                <hr />
+                <a class="dropdown-item" href="./login.html"
+                  ><i class="fas fa-power-off"></i> Logout</a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./cart.html"
+                ><i class="fas fa-cart-arrow-down"></i> My Cart</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="slides" class="carousel slide carousel-cus" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/imgs/img/bfbrg.jpg" alt="FriesBrgrImg" />
+          <div class="carousel-caption text-left">
+            <h1 class="display-2">Hungry?!</h1>
+            <h3>Good, we are here to serve you</h3>
+            <a href="" class="btn btn-outline-light btn-lg">Order Now</a>
+            <a href="" class="btn btn-primary btn-lg">View Menu</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/imgs/img/spaghetti-bg.jpg" alt="Spaghetti" />
+          <div class="carousel-caption text-right">
+            <h1 class="display-2">Hungry?!</h1>
+            <h3>Good, we are here to serve you</h3>
+            <a href="" class="btn btn-outline-light btn-lg">Order Now</a>
+            <a href="" class="btn btn-primary btn-lg">View Menu</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/imgs/img/snwbg.jpg" alt="corn" />
+          <div class="carousel-caption text-right">
+            <h1 class="display-2">Hungry?!</h1>
+            <h3>Good, we are here to serve you</h3>
+            <a href="" class="btn btn-outline-light btn-lg">Order Now</a>
+            <a href="" class="btn btn-primary btn-lg">View Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid padding">
+      <div class="row text-center welcome">
+        <div class="col-12">
+          <h1 class="display-4">Easy 3 Steps To Follow</h1>
+        </div>
+        <hr />
+        <div class="col-12">
+          <p class="lead">
+            The easiest way to your food. Food Ordering System provides fresh
+            delivery with in the 30 minutes and provide free food if order is
+            not on time. So don't wait and start ordering right now!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid padding">
+      <div class="row text-center padding">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <i class="fas fa-utensils"></i>
+          <h3>Choose A Restaurant</h3>
+          <p>
+            First thing you can do is choose from our restautant partners
+            easily!
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <i class="fas fa-bullseye"></i>
+          <h3>Choose A Tasty Dish</h3>
+          <p>
+            We've got you covered with menus from over various delivery
+            restaurants online!
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>Pick Up or Delivery</h3>
+          <p>
+            After all, the food gets delivered or you can pick it up as per your
+            choices!
+          </p>
+        </div>
+      </div>
+      <hr class="my-4" />
+    </div>
+    <div class="container-fluid padding">
+      <div class="row welcome text-center welcome">
+        <div class="col-12">
+          <h1 class="display-4">Popular Dishes</h1>
+        </div>
+        <hr />
+      </div>
+    </div>
+    <div class="container-fluid padding dish-card">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="card-img-top"
+              src="./assets/imgs/uploads/dishesh/thumb/Pappardelle.jpg"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title">Pappardelle</h4>
+                <h4 class="text-muted">
+                  <b>$20</b>
+                </h4>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Distinctio nihil maiores eos nobis perferendis ex?
+              </p>
+              <a href="addToCart" class="btn btn-primary"
+                ><i class="fas fa-cart-plus"></i> Add to Cart</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron">
+          <h1>No records found</h1>
+        </div>
+      </div>
+      <hr class="my-4" />
+    </div>
+    <div class="container-fluid padding">
+      <div class="row text-center padding">
+        <div class="col-12">
+          <h2>Connect With Us</h2>
+        </div>
+        <div class="col-12 social padding">
+          <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-google-plus-g"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4" />
+    <section id="contact-us" class="container shadow my-4 p-4">
+      <!--Section heading-->
+      <div class="alert alert-success">Success</div>
+      <h2 class="text-center my-2 font-weight-bold">Contact Us</h2>
+      <p class="text-center">Always Here For You</p>
+      <!--Section description-->
+      <p class="text-center mx-auto mb-5"></p>
+      <form name="contact-form" action="sendMail" id="myForm" method="POST">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-2">
+              <label class="mb-0" for="name" class="">Fullname*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                required
+              />
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+              <label class="mb-0" for="email" class="">Email*</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+              />
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mb-2">
+              <label class="mb-0" for="subject" class="">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="form-control"
+              />
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mb-2">
+              <label class="mb-0" for="message">Your Message*</label>
+              <textarea
+                type="text"
+                id="message"
+                name="message"
+                rows="2"
+                class="form-control"
+                required
+              >
+Your message</textarea
+              >
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="status text-danger font-weight-bold my-2"></div>
+        <button class="btn btn-info" type="submit">Submit</button>
+      </form>
+    </section>
+    <footer class="section p-3 bg-dark text-white">
+      <div class="text-center">&copy; Copyright 2023 Food Ordering System</div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

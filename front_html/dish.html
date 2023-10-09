@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <style></style> -->
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fas fa-utensil-spoon"></i> Food Ordering System</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarRes"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRes">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./restaurants.html"
+                >Restaurants</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./login.html">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./signup.html">Register</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >johndoe2
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./profile.html"
+                  ><i class="fas fa-user-circle"></i> My Profile</a
+                >
+                <hr />
+                <a class="dropdown-item" href="./orders.html"
+                  ><i class="fas fa-shopping-bag"></i> Orders</a
+                >
+                <hr />
+                <a class="dropdown-item" href="./login.html"
+                  ><i class="fas fa-power-off"></i> Logout</a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./cart.html"
+                ><i class="fas fa-cart-arrow-down"></i> My Cart</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container p-4">
+      <div class="row welcome text-center welcome">
+        <div class="col-12">
+          <h1 class="display-4">Menu of {Restaurant Name}</h1>
+        </div>
+      </div>
+      <div class="container res-card">
+        <div class="card">
+          <img
+            src="./assets/imgs/uploads/restaurant/thumb/artisan-cafe-berea-ky.jpg"
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold text-primary">Name</h4>
+            <p class="card-text lead">Address</p>
+            <p class="card-text">
+              A feast of gorgeousness awaits you with super-seasonal dishes
+              created with love by our wonderful chefs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container p-4 dish-card">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+          <div class="card mb-4 shadow-sm">
+            <img
+              class="card-img-top"
+              src="./assets/imgs/uploads/dishesh/thumb/aw-arancini-articleLarge.jpg"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title">Name</h4>
+                <h4 class="text-muted">
+                  <b>$9</b>
+                </h4>
+              </div>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
+                incidunt odio ducimus.
+              </p>
+              <a href="addToCart" class="btn btn-primary"
+                ><i class="fas fa-shopping-cart"></i> Add to Cart</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="jumbotron">
+          <h1>No records found</h1>
+        </div>
+      </div>
+      <hr class="my-4" />
+    </div>
+    <footer class="section p-3 bg-dark text-white">
+      <div class="text-center">&copy; Copyright 2023 Food Ordering System</div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <style></style> -->
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fas fa-utensil-spoon"></i> Food Ordering System</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarRes"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRes">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./restaurants.html"
+                >Restaurants</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./login.html">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./signup.html">Register</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >johndoe2
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./profile.html"
+                  ><i class="fas fa-user-circle"></i> My Profile</a
+                >
+                <hr />
+                <a class="dropdown-item" href="./orders.html"
+                  ><i class="fas fa-shopping-bag"></i> Orders</a
+                >
+                <hr />
+                <a class="dropdown-item" href="./login.html"
+                  ><i class="fas fa-power-off"></i> Logout</a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./cart.html"
+                ><i class="fas fa-cart-arrow-down"></i> My Cart</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Shopping Cart</h2>
+      <div class="table-responsive-sm">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th width="10%"></th>
+              <th width="10%">Dish</th>
+              <th width="10%">Price</th>
+              <th width="10%">Quantity</th>
+              <th width="10%">SubTotal</th>
+              <th width="10%">Action</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr>
+              <td>
+                <img
+                  class=""
+                  width="70"
+                  src="./assets/imgs/uploads/dishesh/thumb/chimichangs.jpg"
+                />
+              </td>
+              <td>Name</td>
+              <td>$35</td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control text-center"
+                  value="2"
+                  onChange="updateCartItem(this, 1)"
+                />
+              </td>
+              <td>Total</td>
+              <td>
+                <a
+                  href=""
+                  onclick="return confirm('Are you sure?')"
+                  class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"
+                  ><i class="fas fa-trash-alt"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="6"><p>No Items In Your Cart!!</p></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>
+                <a href="./restaurants.html" class="btn btn-sm btn-warning"
+                  ><i class="fas fa-angle-left"></i> Continue Ordering</a
+                >
+              </td>
+              <td colspan="3"></td>
+              <td class="text-left">Grand Total: <b>$50</b></td>
+              <td>
+                <a
+                  href="./checkout.html"
+                  class="btn btn-sm btn-success btn-block"
+                  >Checkout <i class="fas fa-angle-right"></i
+                ></a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <footer class="section p-3 bg-dark text-white">
+      <div class="text-center">&copy; Copyright 2023 Food Ordering System</div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
