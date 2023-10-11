@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  </head>
+
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/front_html/admin/dashboard.html"
+          >Admin Panel</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarRes"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRes">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                User
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../user/list.html"
+                  >Manage User</a
+                >
+                <a class="dropdown-item" href="../user/add_user.html"
+                  >Create User</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Store
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../store/list.html"
+                  >Manage Store</a
+                >
+                <a class="dropdown-item" href="../store/add_res.html"
+                  >Create Store</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Category
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../category/list.html"
+                  >Manage Categories</a
+                >
+                <a class="dropdown-item" href="../category/add_cat.html"
+                  >Create Category</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../menu/list.html"
+                  >Manage Menu</a
+                >
+                <a class="dropdown-item" href="../menu/add_menu.html"
+                  >Create Menu</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Orders
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../orders/list.html"
+                  ><i class="fas fa-shopping-basket"></i> All Orders</a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="../login.html" class="nav-link">Logout </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="conatiner">
+      <form
+        class="form-container mx-auto shadow-container"
+        id="myForm"
+        style="width: 80%"
+      >
+        <h3 class="mb-3 p-2 text-center">Edit User "johndoe12"</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="username">Enter Username</label>
+              <input
+                type="text"
+                id="userName"
+                class="form-control"
+                name="username"
+                value="username"
+              />
+              <span></span>
+            </div>
+            <div class="form-group">
+              <label for="firstname">Enter First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                class="form-control"
+                name="firstname"
+                value="firstName"
+              />
+              <span></span>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Enter Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                class="form-control"
+                name="lastname"
+                value="lastName"
+              />
+              <span></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                name="email"
+                placeholder="email"
+                value="email"
+              />
+              <span></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input
+                type="number"
+                id="phone"
+                class="form-control"
+                name="phone"
+                placeholder="Phone"
+                value="+23131321321"
+              />
+              <span></span>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="pass"
+                class="form-control"
+                name="password"
+                placeholder="Password"
+                value="dsad"
+              />
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea
+            name="address"
+            id="address"
+            type="text"
+            style="height: 70px"
+            class="form-control"
+          ></textarea>
+          <span></span>
+        </div>
+        <button type="submit" class="btn btn-success">Make Changes</button>
+        <a href="./list.html" class="btn btn-secondary">Back</a>
+      </form>
+    </div>
+
+    <footer class="section mt-3 p-3 bg-dark text-white">
+      <div class="text-center">&copy; Copyright 2023 Food Ordering System</div>
+    </footer>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

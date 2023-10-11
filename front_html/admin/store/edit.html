@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  </head>
+
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/front_html/admin/dashboard.html"
+          >Admin Panel</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarRes"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRes">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                User
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../user/list.html"
+                  >Manage User</a
+                >
+                <a class="dropdown-item" href="../user/add_user.html"
+                  >Create User</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Store
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../store/list.html"
+                  >Manage Store</a
+                >
+                <a class="dropdown-item" href="../store/add_res.html"
+                  >Create Store</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Category
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../category/list.html"
+                  >Manage Categories</a
+                >
+                <a class="dropdown-item" href="../category/add_cat.html"
+                  >Create Category</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../menu/list.html"
+                  >Manage Menu</a
+                >
+                <a class="dropdown-item" href="../menu/add_menu.html"
+                  >Create Menu</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Orders
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../orders/list.html"
+                  ><i class="fas fa-shopping-basket"></i> All Orders</a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="../login.html" class="nav-link">Logout </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="conatiner">
+      <form
+        class="form-container mx-auto shadow-container"
+        style="width: 90%"
+        enctype="multipart/form-data"
+      >
+        <h3 class="mb-3 p-2 text-center mb-3">Edit "Store name" Details</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label">Restaurant Name</label>
+              <input
+                type="text"
+                name="res_name"
+                class="form-control"
+                placeholder="Add restaurant name"
+                value="name"
+              />
+            </div>
+            <div class="form-group">
+              <label class="control-label">Bussiness E-mail</label>
+              <input
+                type="text"
+                name="email"
+                class="form-control form-control-danger"
+                placeholder="example@gmail.com"
+                value="email"
+              />
+            </div>
+            <div class="form-group">
+              <label class="control-label">Phone</label>
+              <input
+                type="text"
+                name="phone"
+                class="form-control"
+                placeholder="phone no"
+                value="+231093321"
+              />
+            </div>
+            <div class="form-group">
+              <label class="control-label">Website URL</label>
+              <input
+                type="text"
+                name="url"
+                class="form-control form-control-danger"
+                placeholder=" http://example.com"
+                value="url"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label">Opening Time</label>
+              <select
+                name="o_hr"
+                id="o_hr"
+                class="form-control"
+                data-placeholder="Choose a Category"
+              >
+                <option value="">--Select your Hours--</option>
+                <option value="8am">8am</option>
+                <option value="9am">9am</option>
+                <option value="10am">10am</option>
+                <option value="11am">11am</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Closing Time</label>
+              <select
+                name="c_hr"
+                id="c_hr"
+                class="form-control"
+                data-placeholder="Choose a Category"
+              >
+                <option value="">--Select your Hours--</option>
+                <option value="6pm">6pm</option>
+                <option value="7pm">7pm</option>
+                <option value="8pm">8pm</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Open Days</label>
+              <select
+                name="o_days"
+                id="o_days"
+                class="form-control"
+                data-placeholder="Choose a Category"
+                tabindex="1"
+              >
+                <option value="">--Select your Days--</option>
+                <option value="mon-fri">mon-fri</option>
+                <option value="mon-sat">mon-sat</option>
+                <option value="24hr-x7">24hr-x7</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group has-danger">
+              <label for="image">Image</label>
+              <input type="file" name="image" id="image" class="form-control" />
+
+              <img
+                class="mt-1"
+                src="../../assets/imgs/uploads/restaurant/thumb/hlmg.jpg "
+              />
+              <img width="300" src="../../assets/imgs/uploads/no-image.png" />
+            </div>
+            <div class="form-group">
+              <label class="control-label">Select Category</label>
+              <select name="c_name" id="c_name" class="form-control">
+                <option value="">--Select Category--</option>
+                <option value="c_id">c_name</option>
+              </select>
+            </div>
+            <h3 class="box-title m-t-40">Address</h3>
+            <div class="form-group">
+              <textarea
+                name="address"
+                type="text"
+                style="height: 70px"
+                class="form-control"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <input
+            type="submit"
+            name="submit"
+            class="btn btn-success"
+            value="Make Changes"
+          />
+          <a href="./list.html" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+
+    <footer class="section mt-3 p-3 bg-dark text-white">
+      <div class="text-center">&copy; Copyright 2023 Food Ordering System</div>
+    </footer>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

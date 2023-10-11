@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+  </head>
+
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/front_html/admin/dashboard.html"
+          >Admin Panel</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarRes"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRes">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                User
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../user/list.html"
+                  >Manage User</a
+                >
+                <a class="dropdown-item" href="../user/add_user.html"
+                  >Create User</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Store
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../store/list.html"
+                  >Manage Store</a
+                >
+                <a class="dropdown-item" href="../store/add_res.html"
+                  >Create Store</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Category
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../category/list.html"
+                  >Manage Categories</a
+                >
+                <a class="dropdown-item" href="../category/add_cat.html"
+                  >Create Category</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../menu/list.html"
+                  >Manage Menu</a
+                >
+                <a class="dropdown-item" href="../menu/add_menu.html"
+                  >Create Menu</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Orders
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../orders/list.html"
+                  ><i class="fas fa-shopping-basket"></i> All Orders</a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="../login.html" class="nav-link">Logout </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="container shadow-container">
+        <div class="alert alert-success">success</div>
+        <div class="alert alert-danger">error</div>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <h2>Available Users</h2>
+          </div>
+          <input
+            class="form-control mb-3"
+            id="myInput"
+            type="text"
+            placeholder="Search .."
+            style="width: 50%"
+          />
+        </div>
+        <div class="table-responsive-sm">
+          <table
+            class="table table-bordered table-striped table-hover table-responsive"
+          >
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Username</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <tr>
+                <td>u_id</td>
+                <td>username</td>
+                <td>f_name</td>
+                <td>l_name</td>
+                <td>email</td>
+                <td>phone</td>
+                <td>address</td>
+                <td>
+                  <a href="./edit.html" class="btn btn-info mb-1"
+                    ><i class="fas fa-edit mr-1"></i>Edit</a
+                  >
+                  <a href="javascript:void(0);" class="btn btn-danger"
+                    ><i class="fas fa-trash-alt"></i>Delete</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td colspan="8">Records not found</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer class="section mt-3 p-3 bg-dark text-white">
+      <div class="text-center">&copy; Copyright 2023 Food Ordering System</div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

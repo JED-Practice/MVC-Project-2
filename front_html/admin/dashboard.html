@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+  </head>
+
+  <body class="bg-white">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/front_html/admin/dashboard.html"
+          >Admin Panel</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarRes"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarRes">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                User
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./user/list.html">Manage User</a>
+                <a class="dropdown-item" href="./user/add_user.html"
+                  >Create User</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Store
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./store/list.html"
+                  >Manage Store</a
+                >
+                <a class="dropdown-item" href="./store/add_res.html"
+                  >Create Store</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Category
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./category/list.html"
+                  >Manage Categories</a
+                >
+                <a class="dropdown-item" href="./category/add_cat.html"
+                  >Create Category</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./menu/list.html">Manage Menu</a>
+                <a class="dropdown-item" href="./menu/add_menu.html"
+                  >Create Menu</a
+                >
+              </div>
+            </li>
+            <li class="nav-item dropdown active">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Orders
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./orders/list.html"
+                  ><i class="fas fa-shopping-basket"></i> All Orders</a
+                >
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="./login.html" class="nav-link">Logout </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    class="fa fa-users"
+                    style="color: #d8ad2e; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>2</h2>
+                <p class="m-b-0">User/s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    id="iarchive"
+                    class="fa fa-building"
+                    style="color: #357ae8; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>3</h2>
+                <p class="m-b-0">Restaurant/s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    class="fa fa-utensils"
+                    style="color: #17a2b8; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>11</h2>
+                <p class="m-b-0">Dishes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    class="fa fa-file"
+                    style="color: #9466de; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>14</h2>
+                <p class="m-b-0">Total Order/s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    class="fa fa-th-large"
+                    style="color: #505050; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>9</h2>
+                <p class="m-b-0">Categories</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    class="fa fa-spinner"
+                    style="color: #ad6d9c; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>7</h2>
+                <p class="m-b-0">Pending Order/s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    class="fa fa-check-square"
+                    style="color: #28a745; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>1</h2>
+                <p class="m-b-0">Delivered Order/s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card shadow p-30">
+            <div class="media">
+              <div class="media-left meida media-middle">
+                <span
+                  ><i
+                    class="fa fa-times-circle"
+                    style="color: #dc3545; font-size: 2.5em"
+                  ></i
+                ></span>
+              </div>
+              <div class="media-body media-text-right">
+                <h2>20</h2>
+                <p class="m-b-0">Rejected Order/s</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mt-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Restaurants Report</h2>
+            </div>
+            <div class="col-md-12">
+              <table class="table table-striped table-responsive table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Restaurant Name</th>
+                    <th>Total Sales</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                  <tr>
+                    <td>restaurant_id</td>
+                    <td>name</td>
+                    <td>price</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">Records not found</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-12">
+              <a href="generate_pdf" class="btn btn-success mt-3"
+                >Download Report</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>Dishes Report</h2>
+            </div>
+            <div class="col-md-12">
+              <table class="table table-striped table-responsive table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Dish Name</th>
+                    <th>Ordered Count</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                  <tr>
+                    <td>dish_id</td>
+                    <td>dish_name</td>
+                    <td>quantity</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">Records not found</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-12">
+              <a href="generate_pdf" class="btn btn-success mb-3"
+                >Download Report</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="section mt-3 p-3 bg-dark text-white">
+      <div class="text-center">&copy; Copyright 2023 Food Ordering System</div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown").hover(function () {
+          var dropdownMenu = $(this).children(".dropdown-menu");
+          if (dropdownMenu.is(":visible")) {
+            dropdownMenu.parent().toggleClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
